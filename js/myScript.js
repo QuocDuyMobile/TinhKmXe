@@ -30,7 +30,7 @@ function test() {
   } else {
     var now = new Date();
     var nowD = convertDate(now);
-    fetch("https://sheetdb.io/api/v1/h3v2amsaj5yad/search?Ngay=" + nowD + "")
+    fetch("https://sheetdb.io/api/v1/x5ycfnd5emz5c/search?Ngay=" + nowD + "")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -48,7 +48,7 @@ function test() {
             QuangDuongDiDuoc:  $("#KMDauRa").val() - $("#KMDauVao").val(),
             Ngay: nowD,
           };
-          fetch("	https://sheetdb.io/api/v1/h3v2amsaj5yad", {
+          fetch("https://sheetdb.io/api/v1/x5ycfnd5emz5c", {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -68,7 +68,7 @@ function test() {
 var d = new Date();
 var preday = d.setDate(d.getDate() - 1);
 var dayParam = convertDate(preday);
-fetch("https://sheetdb.io/api/v1/h3v2amsaj5yad/search?Ngay=" + dayParam + "")
+fetch("https://sheetdb.io/api/v1/x5ycfnd5emz5c/search?Ngay=" + dayParam + "")
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
