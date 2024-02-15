@@ -66,8 +66,10 @@ function test() {
 }
 
 var d = new Date();
+var daynow = convertDate(d);
 var preday = d.setDate(d.getDate() - 1);
 var dayParam = convertDate(preday);
+$("#daynow").text("Hôm nay là ngày: "+ daynow +"");
 fetch("https://sheetdb.io/api/v1/x5ycfnd5emz5c/search?Ngay=" + dayParam + "")
   .then((response) => response.json())
   .then((data) => {
